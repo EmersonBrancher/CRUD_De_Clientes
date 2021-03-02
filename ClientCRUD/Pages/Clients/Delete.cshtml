@@ -1,0 +1,36 @@
+@page
+@model ClientCRUD.Pages.Clients.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Deletar</h1>
+
+<h3>Você tem certeza que deseja deletar?</h3>
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Client.name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Client.name)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Client.age)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Client.age)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Client.name" />
+        <input type="submit" value="Deletar" class="btn btn-danger" /> |
+        <a asp-page="./Index">Voltar a Lista</a>
+    </form>
+</div>

@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\emerson.brancher\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\emerson.brancher\\.nuget\\packages"
+    ]
+  }
+}

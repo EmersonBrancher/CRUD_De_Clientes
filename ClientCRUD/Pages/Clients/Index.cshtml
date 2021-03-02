@@ -1,0 +1,41 @@
+@page
+@model ClientCRUD.Pages.Clients.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Clientes</h1>
+
+<p>
+    <a asp-page="Create">Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Client[0].name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Client[0].age)
+            </th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Client) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.age)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.name">Editar</a> |
+                <a asp-page="./Delete" asp-route-id="@item.name">Remover</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
